@@ -39,7 +39,7 @@ Uses tkinter to build a simple chat window
 
 Allows users to type questions and see bot replies in real-time
 
-✅ Additional Features (Optional)
+# ✅ Additional Features (Optional)
 Support both English 
 
 Add a confidence threshold: if similarity < X, respond with “I don’t understand.”
