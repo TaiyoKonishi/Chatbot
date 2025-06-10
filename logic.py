@@ -3,19 +3,12 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def load_faq_data(file_path='faq_data.json'):
+def load_faq_data(file_path='Q_A_data.json'):
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     questions = [item['question'] for item in data]
     answers = [item['answer'] for item in data]
     return questions, answers
-
-def data_into_DataFrame(questions, answers):
-    data = pd.DataFrame({
-        "Question": questions,
-        "Answer": answers
-    })
-    return data
 
 def compute_tfidf(texts):
     tfidf = TfidfVectorizer()
